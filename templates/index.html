@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary_toppage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>My Diary</h1>
+    <div class="a-list">
+        <a href="{{ url_for('signup') }}">Signup as Admin</a>
+        <a href="{{ url_for('login') }}">Login as Admin</a>
+    </div>
+    <div class="top-card">
+        <h2>Top page</h2>
+        <p style="text-align: center;">This is a list of diary entries that were posted in the past. <br>You can view the full content from the details page. Creating, editing, and updating diary entries can be done from the admin page.</p>
+    </div>
+    <hr>
+    {% if articles == [] %}
+        <p class="top">No articles.</p>
+    {% else %}
+        <div class="card-list">
+        {% for article in articles %}
+        <div class="dairy-card">
+            <h3>{{ article.title }}</h3>
+            <p class="created-at">{{ article.created_at.strftime("%Y-%m-%d") }}</p>
+                {% if article.img_name %}
+                <img src="{{ url_for('static', filename='img/' ~ article.img_name) }}">
+                {% else %}
+                No image
+                {% endif %}
+            <div><br><a href="{{ url_for('readmore', article_id = article.id) }}">Readmore</a></div>
+        </div>
+        {% endfor %}
+        </div>
+    {% endif %}
+    <br>
+</body>
+</html>

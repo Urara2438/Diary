@@ -1,0 +1,125 @@
+/* フォントサイズの指定 ------------------------------------------------------------------------------------------*/
+html { 
+    font-size: 62.5%; /* 1rem = 10px */
+    font-family: "Zen Maru Gothic", system-ui, sans-serif;
+}
+
+
+
+body {
+    font-size: 1.6rem; /* 16px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* 背景画像の設定 ------------------------------------------------------------------------------------------*/
+body {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("/static/img/diary_background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(4px);
+    z-index: -1; /*内容残す*/
+}
+
+
+/* hタグ */
+h1 {
+    background-color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    color: rgba(0, 174, 255, 0.75);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    width: 110%;
+    padding: 1rem;
+}
+
+h2 {
+    color: #005795;
+}
+
+/* ログインカード ------------------------------------------------------------------------------------------*/
+.form-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 2rem;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    padding: 2rem 5rem 2rem 5rem;
+}
+
+input {
+    width: 100%;              
+    padding: 0.8rem 1rem;  
+    border-radius: 12px;      
+    border: 2px solid #ccc;   
+    box-sizing: border-box;   
+}
+
+input:focus {
+    outline: none;                     
+    border:0.2rem, solid, #3fa9f5;             
+}
+
+
+/* ログインボタン，トップページボタン ------------------------------------------------------------------------------------------*/
+#button {
+    background: rgba(0, 174, 255, 0.75);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3rem;
+    width: 60%;
+    padding: 1rem 4rem 1rem 4rem;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin: 1rem;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    font-family: "Zen Maru Gothic", system-ui, sans-serif;
+    text-decoration: none;
+}
+
+#button:hover{
+    background: rgba(0, 221, 255, 0.75);
+}
+
+/* Signupへのリンク ------------------------------------------------------------------------------------------*/
+#link {
+    font-weight: bold;
+}
+
+#link:hover {
+    color: rgba(0, 174, 255, 0.75);
+}
+
+.self-center {
+    display: flex;
+    justify-content:center
+}
+
+
+
+#login:hover {
+    color: rgba(0, 174, 255, 0.75);
+}
+
+label {
+    color: #005795;
+    font-weight: 300;
+}
+
+
+
+

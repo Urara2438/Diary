@@ -1,0 +1,101 @@
+/* フォントの指定 ------------------------------------------------------------------------------------------*/
+html { 
+    font-size: 62.5%; /* 1rem = 10px */
+    font-family: "Zen Maru Gothic", system-ui, sans-serif;
+}
+
+body {
+    font-size: 1.6rem; /* 16px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* 背景画像の設定 ------------------------------------------------------------------------------------------*/
+body {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("/static/img/diary_background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(4px);
+    z-index: -1; /*内容残す*/
+}
+
+
+/* ヘッダー ------------------------------------------------------------------------------------------*/
+h1 {
+    background-color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    color: rgba(0, 174, 255, 0.75);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    width: 110%;
+    padding: 1rem;
+}
+
+/* メイン ------------------------------------------------------------------------------------------*/
+h2 {
+    color: #005795;
+    line-height: 0;
+    text-align: center;
+}
+
+.top-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 2rem;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    width: 90%;
+    padding: 1rem 3rem 1rem 3rem;
+    margin: 1rem;
+}
+
+/* ボタン ------------------------------------------------------------------------------------------*/
+a {
+    background: rgba(0, 174, 255, 0.75);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 2rem;
+    width: 60%;
+    padding: 1rem 5rem 1rem 5rem;
+    margin: 1rem;
+    font-weight: bold;
+    font-size: 1.7rem;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    font-family: "Zen Maru Gothic", system-ui, sans-serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+a:hover{
+    background: rgba(0, 221, 255, 0.75);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+

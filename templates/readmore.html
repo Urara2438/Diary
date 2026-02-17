@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary_readmore</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/readmore.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <h1>My Diary</h1>
+    <header>
+        <div class="a-list">
+            <a id="button" href="{{ url_for('index') }}">back</a>
+        </div>
+    </header>
+    <main class="back-card">
+        <h3>{{ article.title }}</h3>
+        <p class="created-at">{{ article.created_at.strftime("%Y-%m-%d") }}</p>
+        <p>{{ article.body }}</p>
+        <br>
+        {% if article.img_name %}
+        <img src="{{ url_for('static', filename='img/' ~ article.img_name) }}" width="500">
+        {% else %}
+        No image
+        {% endif %}
+    </main>
+    <br>
+    <div><a id="button" href="{{ url_for('index') }}">back</a></div>
+    <br>
+</body>
+</html>
