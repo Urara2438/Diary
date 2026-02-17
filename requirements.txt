@@ -1,6 +1,7 @@
 Flask
 gunicorn
 psycopg2-binary
+psycopg[binary]
 Flask-Login
 Flask-SQLAlchemy
 Flask-Migrate
