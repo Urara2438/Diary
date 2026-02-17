@@ -13,7 +13,7 @@ import os
 app = Flask(__name__)
 
 #ログイン機能------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-app.config["SECRET_KEY"] = os.urandom(24)
+
 
 #ログイン管理システム
 login_manager = LoginManager()
@@ -28,16 +28,22 @@ def load_user(user_id):
 #データベースの接続設定------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 db = SQLAlchemy() # データベースの初期化
 
+if app.debug: # デバッグモードのときは、環境変数からデータベースの接続情報を取得する
+    app.config["SECRET_KEY"] = os.urandom(24)
+    DB_INFO = {
+        "user": "postgres",
+        "password": "yoneken812",
+        "host": "localhost",
+        "name": "postgres"
+    }
+    SQLALCHEMY_DATABASE_URI = "postgresql+psycopg://{user}:{password}@{host}/{name}".format(**DB_INFO) # データベースへの接続情報
+else: # デバッグモードでないときは、環境変数からデータベースの接続情報を取得する
+    app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL").replace("postgres://", "postgresql+psycopg://") # データベースへの接続情報、herokuのpostgresはpostgresqlに置き換える必要がある
 
-DB_INFO = {
-    "user": "postgres",
-    "password": "yoneken812",
-    "host": "localhost",
-    "name": "postgres"
-}
-SQLALCHEMY_DATABASE_URI = "postgresql+psycopg://{user}:{password}@{host}/{name}".format(**DB_INFO) # データベースへの接続情報
 app.config["SQLALCHEMY_DATABASE_URI"] = SQLALCHEMY_DATABASE_URI # アプリ内部の設定にデータベースの設定を保存
 db.init_app(app) 
+
 migrate = Migrate(app,db) #マイグレートのためのインスタンス
 
 
