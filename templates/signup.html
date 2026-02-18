@@ -12,7 +12,7 @@
 <body>
     <h1>My Diary</h1>
     <section class="form-card">
-        <h2>Signup as Admin</h2>
+        <h2>Signup</h2>
         <form method="POST">
             <div>
                 <label for="user_name">User name</label>
@@ -23,9 +23,7 @@
             </div>
             <br>
             <div class="self-center"><input id="button" type="submit" value="Signup"></div>
-            <div class="self-center">
-                <p>Already have an account? <a id="link" class="self-bolder" href="{{ url_for('login') }}">Login</a></p> 
-            </div>     
+            <p>Already have an account? <a id="link" class="self-bolder" href="{{ url_for('login') }}">Login</a></p>   
         </form>
     </section>
     <div><br><br><a id="button" href="{{ url_for('index') }}">Top page</a></div>

@@ -12,16 +12,16 @@
 <body>
     <h1>My Diary</h1>
     <div class="a-list">
-        <a href="{{ url_for('signup') }}">Signup as Admin</a>
-        <a href="{{ url_for('login') }}">Login as Admin</a>
+        <a href="{{ url_for('signup') }}">Signup</a>
+        <a href="{{ url_for('login') }}">Login</a>
     </div>
     <div class="top-card">
         <h2>Top page</h2>
-        <p style="text-align: center;">This is a list of diary entries that were posted in the past. <br>You can view the full content from the details page. Creating, editing, and updating diary entries can be done from the admin page.</p>
+        <p style="text-align: justify;">This is a list of diary entries that were posted in the past. You can view the full content from the details page. Creating, editing, and updating diary entries can be done from the admin page.</p>
     </div>
     <hr>
     {% if articles == [] %}
-        <p class="top">No articles.</p>
+        <p class="top-card">No articles.</p>
     {% else %}
         <div class="card-list">
         {% for article in articles %}
