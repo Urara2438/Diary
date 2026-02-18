@@ -34,7 +34,7 @@
                 {% else %}
                 No image
                 {% endif %}
-            <div><br><a href="{{ url_for('delete', article_id = article.id) }}">Delete</a></div>
+            <div><br><a id="delete-button" href="{{ url_for('delete', article_id = article.id) }}" onclick="return confirm('This action cannot be undone. Are you sure?');">Delete</a></div>
         </div>
         {% endfor %}
         </div>

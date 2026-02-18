@@ -12,12 +12,10 @@
 <body>
     <h1>My Diary</h1>
     <div class="a-list">
-        <a href="{{ url_for('signup') }}">Signup</a>
-        <a href="{{ url_for('login') }}">Login</a>
     </div>
     <div class="top-card">
         <h2>Top page</h2>
-        <p style="text-align: justify;">This is a list of diary entries that were posted in the past. You can view the full content from the details page. Creating, editing, and updating diary entries can be done from the admin page.</p>
+        <p style="text-align: justify;">You can read the full content from "Readmore". You can create, edit, and update diaries from the admin page.</p>
     </div>
     <hr>
     {% if articles == [] %}
@@ -39,5 +37,7 @@
         </div>
     {% endif %}
     <br>
+    <a id="button" href="{{ url_for('signup') }}">Signup as admin</a>
+    <a id="button" href="{{ url_for('login') }}">Login as admin</a>
 </body>
 </html>

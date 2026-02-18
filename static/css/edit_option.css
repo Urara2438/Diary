@@ -96,6 +96,7 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
 }
 
+/* 画面サイズ小さい場合のレイアウト変更 ------------------------------------------------------------------------------------------*/
 @media (max-width: 900px) {
     .card-list {
         display: flex;
@@ -115,7 +116,6 @@ a {
     font-size: 1.7rem;
     margin: 1rem;
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
-    font-family: "Zen Maru Gothic", system-ui, sans-serif;
     text-decoration: none;
 }
 
@@ -129,6 +129,25 @@ img {
     height: 15rem;
     border-radius: 2rem;
     object-fit: cover;
+}
+/* 削除ボタン ------------------------------------------------------------------------------------------*/
+#delete-button {
+    background: rgba(255, 0, 0, 0.75);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 2rem;
+    padding: 1rem 5rem 1rem 5rem;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin: 1rem;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+#delete-button:hover{
+    background: rgb(255, 255, 255);
+    color: rgba(255, 0, 0, 0.75);
 }
 
 /* その他 */
@@ -160,6 +179,8 @@ img {
     display: flex;
     justify-content: space-between;
 }
+
+
 
 
 

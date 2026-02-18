@@ -60,6 +60,12 @@ h2 {
     padding: 2rem 5rem 2rem 5rem;
 }
 
+@media (max-width: 900px) {
+    .form-card {
+        width: 60%;
+    }
+}
+
 
 input[type="text"],
 input[type="password"] {

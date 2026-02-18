@@ -4,8 +4,6 @@ html {
     font-family: "Zen Maru Gothic", system-ui, sans-serif;
 }
 
-
-
 body {
     font-size: 1.6rem; /* 16px */
     display: flex;
@@ -101,6 +99,7 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
 }
 
+/* 画面サイズ小さい場合のレイアウト変更 ------------------------------------------------------------------------------------------*/
 @media (max-width: 900px) {
     .card-list {
         display: flex;
@@ -121,7 +120,7 @@ a {
     font-size: 1.7rem;
     margin: 1rem;
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
-    font-family: "Zen Maru Gothic", system-ui, sans-serif;
+    text-align: center;
     text-decoration: none;
 }
 
@@ -137,7 +136,21 @@ img {
     object-fit: cover;
 }
 
-
+#button {
+    background: rgba(0, 174, 255, 0.75);
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 2rem;
+    padding: 1rem 1rem 1rem 1rem;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin: 1rem;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    text-align: center;
+    text-decoration: none;
+}
 
 
 /* その他 */

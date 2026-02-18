@@ -52,7 +52,6 @@ a {
     font-size: 1.7rem;
     margin: 1rem;
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
-    font-family: "Zen Maru Gothic", system-ui, sans-serif;
     text-decoration: none;
 }
 
@@ -93,6 +92,12 @@ h2 {
     padding: 2rem 5rem 2rem 5rem;
 }
 
+@media (max-width: 900px) {
+    .form-card {
+        width: 60%;
+    }
+}
+
 input {
     width: 100%;              /* フォーム内で横いっぱい */
     padding: 0.8rem 1rem;  
@@ -131,7 +136,7 @@ label {
     border: none;
     cursor: pointer;
     border-radius: 3rem;
-    width: 40%;
+    width: 70%;
     padding: 1rem 4rem 1rem 4rem;
     font-weight: bold;
     font-size: 1.7rem;
