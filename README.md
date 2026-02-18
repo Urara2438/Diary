@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/25386576/README.md)
 # My Dairy
 
 Flask と PostgreSQL を使用して作成した日記アプリ(CRUD/ログイン機能あり)です．
@@ -9,17 +8,17 @@ Flask と PostgreSQL を使用して作成した日記アプリ(CRUD/ログイ�
 ## スクリーンショット
 
 ### トップページ
-<img src="Diary/screenshot/toppage.png" width="600">
+<img src="screenshot/toppage.png" width="600">
 
 ### ログインページ
-<img src="Diary/screenshot/login.png" width="600">
+<img src="screenshot/login.png" width="600">
 
 ### 日記作成
-<img src="Diary/screenshot/create.png" width="600">
+<img src="screenshot/create.png" width="600">
 
 ### 日記編集
-<img src="Diary/screenshot/edit_option.png" width="600">
-<img src="Diary/screenshot/edit.png" width="600">
+<img src="screenshot/edit_option.png" width="600">
+<img src="screenshot/edit.png" width="600">
 
 ---
 
