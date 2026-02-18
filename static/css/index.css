@@ -141,7 +141,7 @@ img {
     color: white;
     border: none;
     cursor: pointer;
-    width: 50%;
+    width: 30%;
     border-radius: 2rem;
     padding: 1rem 1rem 1rem 1rem;
     font-weight: bold;
@@ -151,6 +151,17 @@ img {
     text-align: center;
     text-decoration: none;
 }
+
+#button:hover{
+    background: rgba(0, 221, 255, 0.75);
+}
+
+@media (max-width: 900px) {
+    #button {
+        width: 60%;
+    }
+}
+
 
 
 /* その他 */
