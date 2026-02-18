@@ -39,7 +39,7 @@ if app.debug: # デバッグモードのときは、環境変数からデータ�
     SQLALCHEMY_DATABASE_URI = "postgresql+psycopg://{user}:{password}@{host}/{name}".format(**DB_INFO) # データベースへの接続情報
 else: # デバッグモードでないときは、環境変数からデータベースの接続情報を取得する
     app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL").replace("postgres://", "postgresql+psycopg://") # データベースへの接続情報、herokuのpostgresはpostgresqlに置き換える必要がある
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL").replace("postgres://", "postgresql+psycopg://")
 
 app.config["SQLALCHEMY_DATABASE_URI"] = SQLALCHEMY_DATABASE_URI # アプリ内部の設定にデータベースの設定を保存
 db.init_app(app) 
